@@ -12,6 +12,7 @@ export default function NasaPhoto() {
     fetchPhoto();
     async function fetchPhoto() {
       axios.get(baseUrl).then((res) => {
+        console.log(res);
         setPhotoData(res.data);
       });
     }
@@ -22,24 +23,26 @@ export default function NasaPhoto() {
   return (
     <>
       <NavBar />
-      <div className="nasa-photo">
-        {photoData.media_type === "image" ? (
-          <img alt={photoData.title} src={photoData.url} className="photo" />
-        ) : (
-          <iframe
-            title="space-video"
-            src={photoData.url}
-            frameBorder="0"
-            gesture="media"
-            allow="encrypted-media"
-            allowFullScreen
-            className="photo"
-          />
-        )}
-        <div>
-          <h1>{photoData.title}</h1>
-          <p>{photoData.date}</p>
-          <p>{photoData.explanation}</p>
+      <div className="photo-wrapper">
+        <div className="nasa-photo">
+          {photoData.media_type === "image" ? (
+            <img alt={photoData.title} src={photoData.url} className="photo" />
+          ) : (
+            <iframe
+              title="space-video"
+              src={photoData.url}
+              frameBorder="0"
+              gesture="media"
+              allow="encrypted-media"
+              allowFullScreen
+              className="photo"
+            />
+          )}
+          <div>
+            <h1>{photoData.title}</h1>
+            <p>{photoData.date}</p>
+            <p>{photoData.explanation}</p>
+          </div>
         </div>
       </div>
     </>

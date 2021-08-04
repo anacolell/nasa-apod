@@ -1,0 +1,30 @@
+.home {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+}
+
+.home-link {
+  padding: 50px;
+  text-align: center;
+  text-decoration: none;
+  background: -webkit-linear-gradient(#eee, #454656);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  word-spacing: 0.3rem;
+  font-family: "Lato", sans-serif;
+  transition: 1s ease all;
+}
+
+.home-link:hover {
+  transform: scale(1.1);
+  background: -webkit-linear-gradient(#fff, #67697c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
