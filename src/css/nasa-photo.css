@@ -6,7 +6,7 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  margin-top: 100px;
   color: #fff;
 }
 
@@ -29,7 +29,6 @@
 }
 
 .photo-text {
-  padding: 20px;
   padding-top: 0;
   line-height: 1.5;
   margin: 0 20px;
@@ -46,8 +45,6 @@
   margin: 20px 0;
   padding-top: 20px;
   opacity: 0.65;
-  height: 500px;
-  overflow: scroll;
 }
 
 .photo-hd {
@@ -72,6 +69,7 @@
 @media (min-width: 768px) {
   .photo-wrapper {
     padding-bottom: 50px;
+    margin-top: 50px;
   }
 
   .nasa-photo {
@@ -84,6 +82,12 @@
   }
 
   .photo-text {
+    padding: 20px;
     padding-left: 30px;
+  }
+
+  .photo-explanation {
+    height: 500px;
+    overflow: scroll;
   }
 }
