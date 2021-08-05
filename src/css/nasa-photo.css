@@ -1,12 +1,12 @@
 .photo-wrapper {
   width: 95%;
-  height: 100vh;
+  /* height: 100vh; */
   position: absolute;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 100px;
+  margin-top: 50px;
 }
 
 .nasa-photo {
@@ -15,7 +15,6 @@
   background-color: #121212;
   color: #b7b7b7;
   margin: 0 auto;
-  margin-bottom: 100px;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
 }
 
@@ -31,7 +30,7 @@
 
 .photo-text {
   padding: 20px;
-  padding-top: 50px;
+  padding-top: 30px;
   line-height: 1.4;
 }
 
@@ -61,13 +60,17 @@
 } */
 
 @media (min-width: 768px) {
+  .photo-wrapper {
+    padding-bottom: 50px;
+  }
+
   .nasa-photo {
     display: flex;
-    padding: 40px;
   }
 
   .photo {
     width: 65%;
+    padding-left: 10px;
   }
 
   .photo-text {

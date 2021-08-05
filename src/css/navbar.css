@@ -1,1 +1,13 @@
+.navbar {
+  background-color: #3f3f3f;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 
+.navbar-link {
+  color: #b7b7b7;
+  padding-right: 40px;
+  text-decoration: none;
+}
