@@ -8,7 +8,7 @@ import ParticleConfig from "../config/particle-config";
 const nasaApiKey = process.env.REACT_APP_NASA_API_KEY;
 const baseUrl = `https://api.nasa.gov/planetary/apod?api_key=${nasaApiKey}`;
 
-export default function NasaPhoto() {
+export default function Photos() {
   const [photoData, setPhotoData] = useState(null);
 
   useEffect(() => {
@@ -22,10 +22,6 @@ export default function NasaPhoto() {
   }, []);
 
   if (!photoData) return <div />;
-
-  const isCreditTrue = photoData.copyright
-    ? `Copyright: ${photoData.copyright}`
-    : null;
 
   return (
     <>
@@ -50,7 +46,6 @@ export default function NasaPhoto() {
             <p className="photo-date">
               <Moment format="DD/MM/YYYY">{photoData.date}</Moment>
             </p>
-            <p className="photo-copyright">{isCreditTrue}</p>
             <p className="photo-explanation">{photoData.explanation}</p>
             <a className="photo-hd" href={photoData.hdurl}>
               View in HD

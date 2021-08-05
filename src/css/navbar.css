@@ -1,13 +1,39 @@
 .navbar {
-  background-color: #3f3f3f;
+  /* background-color: #3f3f3f; */
+  background-color: #333232;
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.navbar-links {
+  display: flex;
 }
 
 .navbar-link {
-  color: #b7b7b7;
+  color: #fff;
+  opacity: 0.6;
   padding-right: 40px;
   text-decoration: none;
+}
+
+.navbar-title {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  opacity: 0.85;
+}
+
+.rocket-icon  {
+  color: hsl(224, 52%, 82%);
+  padding-right: 5px;
 }
