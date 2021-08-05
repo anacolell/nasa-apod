@@ -1,0 +1,76 @@
+.photo-wrapper {
+  width: 95%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 100px;
+}
+
+.nasa-photo {
+  padding: 40px 0;
+  /* background-color: #0e1217; */
+  background-color: #121212;
+  color: #b7b7b7;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+}
+
+.photo {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.photo-title {
+  color: #d3d1d1;
+  font-size: 1.5rem;
+}
+
+.photo-text {
+  padding: 20px;
+  padding-top: 50px;
+  line-height: 1.4;
+}
+
+.photo-date {
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+}
+
+.photo-explanation {
+  border-top: 0.5px solid hsl(224, 52%, 82%);
+  padding: 20px 0;
+}
+
+.photo-hd {
+  text-decoration: none;
+  color: hsl(224, 52%, 82%);
+  transition: 0.4s ease all;
+}
+
+.photo-hd:hover {
+  cursor: pointer;
+  color: hsl(224, 52%, 62%);
+}
+
+/* .nasa-photo {
+  width: 100%;
+} */
+
+@media (min-width: 768px) {
+  .nasa-photo {
+    display: flex;
+    padding: 40px;
+  }
+
+  .photo {
+    width: 65%;
+  }
+
+  .photo-text {
+    padding-left: 30px;
+  }
+}
