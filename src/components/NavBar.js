@@ -4,6 +4,7 @@ import logo from "../logo.png";
 
 export default function NavBar() {
   const [show, setShow] = useState(true);
+
   const controlNavbar = () => {
     if (window.scrollY > 20) {
       setShow(false);
@@ -21,7 +22,7 @@ export default function NavBar() {
 
   return (
     <div className={`navbar ${show && "nav-opaque"}`}>
-      <div class="navbar-title">
+      <div className="navbar-title">
         <img src={logo} alt="logo" className="logo" />
         <p>Astronomy Picture of the Day</p>
       </div>

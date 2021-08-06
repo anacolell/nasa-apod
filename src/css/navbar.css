@@ -52,6 +52,8 @@
     position: fixed;
     font-size: 0.8rem;
     background: black;
+    transition-timing-function: ease-in;
+    transition: 0.5s;
   }
 
   .nav-opaque {

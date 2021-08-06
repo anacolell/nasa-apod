@@ -1,0 +1,41 @@
+.arrows {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+  opacity: 0.8;
+  color: hsl(224, 100%, 74%);
+}
+
+.arrow-right:hover,
+.arrow-left:hover {
+  cursor: pointer;
+  color: hsl(224, 100%, 64%);
+}
+
+.arrow {
+  margin: 0 20px;
+  font-size: 2.5rem;
+}
+
+.arrow-text {
+  font-size: 0.9rem;
+}
+
+.datepicker-wrapper {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.datepicker-text {
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+.datepicker {
+  padding: 5px 10px;
+  border-radius: 10px;
+  outline: none;
+}
