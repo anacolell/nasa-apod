@@ -32,10 +32,12 @@
 .datepicker-text {
   font-size: 1.1rem;
   margin-right: 10px;
+  opacity: 0.8;
 }
 
 .datepicker {
   padding: 5px 10px;
   border-radius: 10px;
   outline: none;
+  opacity: 0.8;
 }

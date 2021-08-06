@@ -16,7 +16,7 @@ export default function NasaPhoto() {
   const [photoData, setPhotoData] = useState(null);
   const [date, setPhotoDate] = useState(new Date());
 
-  const newDate = date.toISOString().split("T")[0];
+  const newDate = formatDate(date);
 
   useEffect(() => {
     fetchPhoto();
@@ -34,16 +34,30 @@ export default function NasaPhoto() {
     ? `Copyright: ${photoData.copyright}`
     : null;
 
+  function formatDate(date) {
+    return date.toISOString().split("T")[0];
+  }
+
   function handlePrevDay() {
-    date.setDate(date.getDate() - 1);
-    let newestDate = date.toISOString().slice(0, 10);
-    setPhotoData(newestDate);
+    let prevDay = new Date(date);
+    prevDay.setDate(prevDay.getDate() - 1);
+    let limitDate = formatDate(new Date("06/21/1995"));
+    if (formatDate(prevDay) > limitDate) {
+      setPhotoDate(prevDay);
+    } else {
+      return;
+    }
   }
 
   function handleNextDay() {
-    date.setDate(date.getDate() + 1);
-    let newestDate = date.toISOString().slice(0, 10);
-    setPhotoData(newestDate);
+    let nextDay = new Date(date);
+    nextDay.setDate(nextDay.getDate() + 1);
+    let now = formatDate(new Date());
+    if (formatDate(nextDay) > now) {
+      return;
+    } else {
+      setPhotoDate(nextDay);
+    }
   }
 
   return (
@@ -102,7 +116,7 @@ export default function NasaPhoto() {
                 peekNextMonth
                 showYearDropdown
                 maxDate={new Date()}
-                minDate={new Date("June 16, 1995")}
+                minDate={new Date("June 21, 1995")}
               />
             </div>
           </div>
