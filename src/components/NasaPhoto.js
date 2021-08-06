@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import NavBar from "./NavBar";
+import DatePicker from "./DatePicker";
+import Arrows from "./Arrows";
 import Moment from "react-moment";
 import Particles from "react-particles-js";
 import ParticleConfig from "../config/particle-config";
-import DatePicker from "react-datepicker";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const nasaApiKey = process.env.REACT_APP_NASA_API_KEY;
 const baseUrl = `https://api.nasa.gov/planetary/apod?api_key=`;
@@ -88,37 +86,11 @@ export default function NasaPhoto() {
             <a className="photo-hd" href={photoData.hdurl}>
               View in HD
             </a>
-            <div className="arrows">
-              <div className="arrow-left">
-                <FontAwesomeIcon
-                  className="arrow"
-                  onClick={() => handlePrevDay()}
-                  icon={faArrowLeft}
-                />
-                <p className="arrow-text">Previous day</p>
-              </div>
-              <div className="arrow-right">
-                <FontAwesomeIcon
-                  className="arrow arrow-right"
-                  onClick={() => handleNextDay()}
-                  icon={faArrowRight}
-                />
-                <p className="arrow-text">Next day</p>
-              </div>
-            </div>
-            <div className="datepicker-wrapper">
-              <p className="datepicker-text">...or pick a date</p>
-              <DatePicker
-                className="datepicker"
-                selected={date}
-                onChange={(date) => setPhotoDate(date)}
-                dateFormat="dd-MM-Y"
-                peekNextMonth
-                showYearDropdown
-                maxDate={new Date()}
-                minDate={new Date("June 21, 1995")}
-              />
-            </div>
+            <Arrows
+              handlePrevDay={handlePrevDay}
+              handleNextDay={handleNextDay}
+            />
+            <DatePicker date={date} setPhotoDate={setPhotoDate} />
           </div>
         </div>
       </div>
