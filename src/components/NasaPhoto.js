@@ -93,7 +93,7 @@ export default function NasaPhoto() {
               handlePrevDay={handlePrevDay}
               handleNextDay={handleNextDay}
             />
-            <DatePicker date={date} setPhotoDate={setPhotoDate} withPortal />
+            <DatePicker date={date} setPhotoDate={setPhotoDate} />
           </div>
         </div>
       </div>

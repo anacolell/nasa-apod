@@ -1,5 +1,5 @@
 .datepicker-wrapper {
-  margin-top: 50px;
+  padding-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +7,7 @@
 
 .datepicker-text {
   font-size: 1.1rem;
-  margin-right: 10px;
+  padding-right: 10px;
   opacity: 0.8;
 }
 

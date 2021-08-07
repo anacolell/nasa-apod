@@ -38,9 +38,9 @@ export default function Arrows({
 
   return (
     <div className="arrows">
-      <div className="arrow-left">
+      <div>
         <FontAwesomeIcon
-          className={`arrow ${prevDay && "btn-disabled"}`}
+          className={`arrow arrow-left ${prevDay && "btn-disabled"}`}
           onClick={() => handlePrevDay()}
           icon={faArrowLeft}
         />
@@ -48,7 +48,7 @@ export default function Arrows({
           Previous day
         </p>
       </div>
-      <div className="arrow-right">
+      <div>
         <FontAwesomeIcon
           className={`arrow arrow-right ${nextDay && "btn-disabled"}`}
           onClick={() => handleNextDay()}
