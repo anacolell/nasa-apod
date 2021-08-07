@@ -8,6 +8,7 @@
   margin-right: auto;
   margin-top: 100px;
   color: #fff;
+  padding-bottom: 50px;
 }
 
 .nasa-photo {
@@ -68,7 +69,6 @@
 
 @media (min-width: 768px) {
   .photo-wrapper {
-    padding-bottom: 50px;
     margin-top: 50px;
   }
 

@@ -12,7 +12,6 @@ export default function Datepicker({ date, setPhotoDate }) {
         dateFormat="dd-MM-Y"
         peekNextMonth
         showYearDropdown
-        withPortal
         maxDate={new Date()}
         minDate={new Date("June 21, 1995")}
       />
