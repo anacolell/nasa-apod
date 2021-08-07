@@ -6,7 +6,6 @@ import Arrows from "./Arrows";
 import Moment from "react-moment";
 import Particles from "react-particles-js";
 import ParticleConfig from "../config/particle-config";
-import { BounceLoader, BarLoader, BeatLoader } from "react-spinners";
 
 const nasaApiKey = process.env.REACT_APP_NASA_API_KEY;
 const baseUrl = `https://api.nasa.gov/planetary/apod?api_key=`;
@@ -64,9 +63,6 @@ export default function NasaPhoto() {
       <NavBar />
       <div className="photo-wrapper">
         <div className="nasa-photo">
-          <BounceLoader Loading />
-          <BarLoader Loading />
-          <BeatLoader Loading />
           {photoData.media_type === "image" ? (
             <img className="photo" alt={photoData.title} src={photoData.url} />
           ) : (
@@ -91,6 +87,9 @@ export default function NasaPhoto() {
               View in HD
             </a>
             <Arrows
+              formatDate={formatDate}
+              newDate={newDate}
+              date={date}
               handlePrevDay={handlePrevDay}
               handleNextDay={handleNextDay}
             />

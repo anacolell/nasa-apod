@@ -21,3 +21,12 @@
 .arrow-text {
   font-size: 0.9rem;
 }
+
+.btn-disabled {
+  color: gray;
+}
+
+.btn-disabled:hover {
+  cursor: default;
+  color: gray;
+}
