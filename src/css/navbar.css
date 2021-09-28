@@ -30,7 +30,6 @@
 
 .navbar-link:hover {
   cursor: pointer;
-  border-bottom: 1px solid hsl(224, 52%, 82%);
   color: hsl(224, 52%, 92%);
 }
 
